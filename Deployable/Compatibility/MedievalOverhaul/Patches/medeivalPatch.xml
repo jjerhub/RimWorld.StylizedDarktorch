@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[@Name="DarktorchBase"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+        <value>
+            <li>DankPyon_RusticTorchLamp</li>
+            <li>DankPyon_Pyre</li>
+            <li>DankPyon_PyreRound</li>
+            <li>DankPyon_Candle</li>
+            <li>DankPyon_Candle_Beeswax</li>
+            <li>DankPyon_Candles</li>
+            <li>DankPyon_Candles_Beeswax</li>
+            <li>DankPyon_CandleStand</li>
+            <li>DankPyon_Candelabra</li>
+            <li>DankPyon_WallTorch</li>
+            <li>DankPyon_RusticTorchLamp</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="DarktorchWall"]/costList</xpath>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="DarktorchWall"]</xpath>
+        <value>
+            <costStuffCount>15</costStuffCount>
+            <stuffCategories>
+                <li>Woody</li>
+                <li>DankPyon_RawWood</li>
+            </stuffCategories>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="DarktorchWall"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+        <value>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>2.0</fuelConsumptionRate>
+                <fuelCapacity>24.0</fuelCapacity>
+                <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>DankPyon_Coal</li>
+                        <li>DankPyon_Tar</li>
+                    </thingDefs>
+                    <categories>
+                        <li>DankPyon_RawWood</li>
+                        <li>DankPyon_Wood</li>
+                    </categories>
+                </fuelFilter>
+                <initialFuelPercent>1</initialFuelPercent>
+                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+                <fuelIconPath>UI/IconRawWood</fuelIconPath>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[@Name="TorchBase"]/costStuffCount</xpath>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[@Name="TorchBase"]/stuffCategories</xpath>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="TorchLamp"]</xpath>
+        <value>
+            <stuffCategories>
+                <li>Woody</li>
+                <li>DankPyon_RawWood</li>
+            </stuffCategories>
+            <costStuffCount>20</costStuffCount>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[@Name="TorchBase"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="TorchLamp"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="TorchLamp"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="TorchLamp"]/comps</xpath>
+        <value>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>2.0</fuelConsumptionRate>
+                <fuelCapacity>24.0</fuelCapacity>
+                <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>DankPyon_Coal</li>
+                        <li>DankPyon_Tar</li>
+                    </thingDefs>
+                    <categories>
+                        <li>DankPyon_RawWood</li>
+                        <li>DankPyon_Wood</li>
+                    </categories>
+                </fuelFilter>
+                <initialFuelPercent>1</initialFuelPercent>
+                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+                <fuelIconPath>UI/IconRawWood</fuelIconPath>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="DarktorchFungus"]</xpath>
+        <value>
+            <costStuffCount IsNull="True" />
+            <stuffCategories IsNull="True" />
+        </value>
+    </Operation>
+</Patch>
