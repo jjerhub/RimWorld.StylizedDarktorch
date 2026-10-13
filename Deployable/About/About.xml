@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <modVersion>1.0.3</modVersion>
+	<packageId>jjerhub.StylizedDarktorch</packageId>
+	<name>Stylized Darktorch</name>
+	<author>jjerhub</author>
+	<supportedVersions>
+		<li>1.5</li>
+		<li>1.6</li>
+        <li>1.7</li>
+	</supportedVersions>
+	<description>This mod adds darklight wall torches to match the standard wall torches added in v1.5 as well as adding the "style" feature for darklight torches. Spikecore, Totemic, Morbid, and Rustic are the styles included. 
+  
+NOTE: All credit for the original torch artwork goes to the Ludeon Studeos team. I just did recolors.
+
+Update May 2nd, 2025: note that this mod doesn't do anything to add darktorch textures for any non-vanilla lamps.
+
+--changelog--
+v1.0.3:
+- changed to support medeival overhaul and simple chains: lumber properly.  Bonus!: fixed fungus darktorch to not require wood to be built (this was a bug with medieval overhaul).
+v1.0.2a:
+- flagged for 1.7 after cursory test</description>
+    <modDependencies>
+    <li>
+      <packageId>ludeon.rimWorld.ideology</packageId>
+      <displayName>Ideology</displayName>
+    </li>
+  </modDependencies>
+    <loadAfter>
+        <li>brrainz.harmony</li>
+        <li>ludeon.rimWorld.ideology</li>
+        <li>owlchemist.simplechains.lumber</li>
+        <li>dankpyon.medieval.overhaul</li>
+    </loadAfter>
+</ModMetaData>

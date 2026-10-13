@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation  Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "TorchLamp" or defName = "TorchWallLamp" or defName = "Campfire" or defName = "Darktorch" or defName = "DarktorchFungus" or defName = "Brazier" or defName = "DarklightBrazier" or @Name = "TorchBase"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+        <value>
+            <li MayRequire="ludeon.rimworld.ideology">DarktorchWall</li>
+            <li MayRequire="ludeon.rimworld.ideology">DarktorchFungusWall</li>
+        </value>
+    </Operation>
+</Patch>

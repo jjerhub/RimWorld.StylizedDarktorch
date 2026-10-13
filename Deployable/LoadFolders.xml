@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+  <v1.5>
+    <li>Common</li>
+  </v1.5>
+  <v1.6>
+    <li>Common</li>
+    <li IfModActive="owlchemist.simplechains.lumber">Compatibility\SimpleChains_Lumber</li>
+    <li IfModActive="dankpyon.medieval.overhaul">Compatibility\MedievalOverhaul</li>
+  </v1.6>
+  <v1.7>
+    <li>Common</li>
+    <li IfModActive="owlchemist.simplechains.lumber">Compatibility\SimpleChains_Lumber</li>
+    <li IfModActive="dankpyon.medieval.overhaul">Compatibility\MedievalOverhaul</li>
+  </v1.7>
+</loadFolders>

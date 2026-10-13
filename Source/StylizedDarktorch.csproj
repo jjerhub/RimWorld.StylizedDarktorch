@@ -35,21 +35,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CompDarklightOverlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4518" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\.gitignore">
+      <Link>.gitignore</Link>
+    </Content>
+    <Content Include="..\Deployable\About\About.xml">
+      <Link>About.xml</Link>
+    </Content>
+    <Content Include="..\Deployable\LoadFolders.xml">
+      <Link>LoadFolders.xml</Link>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y "$(TargetPath)" "C:\Dev\Mods\RimWorld\StylizedDarktorch\Deployable\Common\Assemblies\"
+xcopy /S /Y /D "C:\Dev\Mods\RimWorld\StylizedDarktorch\Deployable\" "C:\RW\Mods\StylizedDarktorch\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

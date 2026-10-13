@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName = "Darktorch" or defName = "DarktorchFungus"]/statBases</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "Darktorch" or defName = "DarktorchFungus"]</xpath>
+            <value>
+                <statBases />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName = "Darktorch" or defName = "DarktorchFungus"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "Darktorch" or defName = "DarktorchFungus"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Darktorch" or defName = "DarktorchFungus"]/statBases</xpath>
+        <value>
+            <StyleDominance MayRequire="ludeon.rimworld.ideology">5</StyleDominance>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Darktorch" or defName = "DarktorchFungus"]/comps</xpath>
+        <value>
+            <li Class="CompProperties_Styleable" />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StyleCategoryDef[defName = "Spikecore"]/thingDefStyles</xpath>
+        <value>
+            <li>
+                <thingDef>Darktorch</thingDef>
+                <styleDef>SpikecoreDarktorch_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungus</thingDef>
+                <styleDef>SpikecoreDarktorch_Fungus_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchWall</thingDef>
+                <styleDef>Darktorch_WallSpikecore</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungusWall</thingDef>
+                <styleDef>Darktorch_Fungus_WallSpikecore</styleDef>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StyleCategoryDef[defName = "Totemic"]/thingDefStyles</xpath>
+        <value>
+            <li>
+                <thingDef>Darktorch</thingDef>
+                <styleDef>TotemicDarktorch_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungus</thingDef>
+                <styleDef>TotemicDarktorch_Fungus_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchWall</thingDef>
+                <styleDef>Darktorch_WallTotemic</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungusWall</thingDef>
+                <styleDef>Darktorch_Fungus_WallTotemic</styleDef>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StyleCategoryDef[defName = "Morbid"]/thingDefStyles</xpath>
+        <value>
+            <li>
+                <thingDef>Darktorch</thingDef>
+                <styleDef>MorbidDarktorch_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungus</thingDef>
+                <styleDef>MorbidDarktorch_Fungus_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchWall</thingDef>
+                <styleDef>Darktorch_WallMorbid</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungusWall</thingDef>
+                <styleDef>Darktorch_Fungus_WallMorbid</styleDef>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StyleCategoryDef[defName = "Rustic"]/thingDefStyles</xpath>
+        <value>
+            <li>
+                <thingDef>Darktorch</thingDef>
+                <styleDef>RusticDarktorch_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungus</thingDef>
+                <styleDef>RusticDarktorch_Fungus_Floor</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchWall</thingDef>
+                <styleDef>Darktorch_WallRustic</styleDef>
+            </li>
+            <li>
+                <thingDef>DarktorchFungusWall</thingDef>
+                <styleDef>Darktorch_Fungus_WallRustic</styleDef>
+            </li>
+        </value>
+    </Operation>
+</Patch>
