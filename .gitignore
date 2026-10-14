@@ -419,4 +419,4 @@ FodyWeavers.xsd
 *.msp
 
 # ----------------------------------------------------------------------
-/Deployable/Assemblies/*
+/Deployable/*/Assemblies/*
