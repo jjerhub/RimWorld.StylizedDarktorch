@@ -3,11 +3,11 @@
     <modVersion>1.0.3</modVersion>
 	<packageId>jjerhub.StylizedDarktorch</packageId>
 	<name>Stylized Darktorch</name>
-	<author>jjerhub</author>
+	<author>jjerhub,Harry_Robinson1(SimpleChains:Lumber patch)</author>
 	<supportedVersions>
 		<li>1.5</li>
 		<li>1.6</li>
-        <li>1.7</li>
+    <li>1.7</li>
 	</supportedVersions>
 	<description>This mod adds darklight wall torches to match the standard wall torches added in v1.5 as well as adding the "style" feature for darklight torches. Spikecore, Totemic, Morbid, and Rustic are the styles included. 
   
